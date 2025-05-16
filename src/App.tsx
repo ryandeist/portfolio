@@ -1,29 +1,14 @@
 import './App.css'
 
+import NavBar from './components/NavBar/NavBar'
+
 function App() {
 
   return (
     <div className="App">
-      <nav>Nav</nav>
-      <header>Header</header>
-      <main>Main
-        <section>
-          <h1>image</h1>
-          <aside>content</aside>
-        </section>
-        <section>
-          <h1>image</h1>
-          <aside>content</aside>
-        </section>
-        <section>
-          <h1>image</h1>
-          <aside>content</aside>
-        </section>
-        <section>
-          <h1>image</h1>
-          <aside>content</aside>
-        </section>
-      </main>
+      <NavBar />
+      <header>Projects</header>
+      <main>Main</main>
     </div>
   )
 }

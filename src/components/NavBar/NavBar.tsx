@@ -32,13 +32,14 @@ const NavBar = () => {
 
     return (
         <nav className="bg-white shadow-md fixed top-0 w-full z-50" ref={wrapperRef}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-                <div className="text-xl font-bold text-indigo-600">
+            <div className="mx-auto xl:mx-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-600">
+
                     <Link to="/">/portfolio</Link>
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex ml-auto space-x-6">
+                <div className="hidden md:flex ml-auto space-x-4 sm:space-x-6 lg:space-x-8">
                     {navLinks.map((link, index) =>
                         link.external ? (
                             <a
@@ -46,7 +47,8 @@ const NavBar = () => {
                                 href={link.path}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 hover:text-indigo-500 transition"
+                                className="text-gray-700 hover:text-indigo-500 transition text-sm sm:text-base md:text-lg lg:text-xl"
+
                             >
                                 {link.name}
                             </a>
@@ -54,7 +56,8 @@ const NavBar = () => {
                             <Link
                                 key={index}
                                 to={link.path}
-                                className="text-gray-700 hover:text-indigo-500 transition"
+                                className="text-gray-700 hover:text-indigo-500 transition text-sm sm:text-base md:text-lg lg:text-xl"
+
                             >
                                 {link.name}
                             </Link>

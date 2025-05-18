@@ -1,28 +1,53 @@
 import { useState, useRef } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import ProjectCard from '../ProjectCard/ProjectCard';
+import BattleshipImage from "/images/battleship.png";
+import MediaMatchImage from "/images/mediamatch.png";
+import MoovrImage from "/images/moovr.png";
+import StatrackerImage from "/images/statracker.png";
 import './Home.css';
 
 type Project = {
     title: string;
+    technologies: string[];
     description: string;
+    url: string;
+    github: string;
+    image: string;
 };
 
 const projects: Project[] = [
     {
-        title: 'Task Tracker',
-        description: 'A full-stack app for managing tasks efficiently with React and Express.',
+        title: 'Moovr',
+        technologies: ['React.js', 'Django', 'PostgreSQL', 'Tailwind CSS'],
+        description: 'Moovr is a React-Django application that helps moving companies or individuals track items and boxes during relocations. This project provided an opportunity to build a custom Django API and integrate it with a React front end. It also allowed me to refine my JavaScript and React skills by developing several dynamic and creative UI components.',
+        url: 'https://moovr.netlify.app/',
+        github: 'https://github.com/ryandeist/moovr-front-end',
+        image: MoovrImage,
     },
     {
-        title: 'E-Commerce Site',
-        description: 'A responsive storefront with shopping cart and Stripe payments.',
+        title: 'Media Match',
+        technologies: ['React.js', 'Express.js', 'Node.js', 'MongoDB'],
+        description: 'Media Match, a MERN stack app that helps users build a game library based on their preferences, with future support for other media. It offers a simple interface for discovering new content. Developing this app allowed our team to showcase React’s strengths, including reusable components, useContext, useEffect, and service functions to connect our Express API and perform CRUD operations.',
+        url: 'https://media-match.netlify.app/',
+        github: 'https://github.com/ryandeist/mern-media-match-front-end',
+        image: MediaMatchImage,
     },
     {
-        title: 'Chat App',
-        description: 'Real-time messaging app using WebSockets and Node.js.',
+        title: 'MDL Statracker',
+        technologies: ['JavaScript', 'Express.js', 'Node.js', 'MongoDB', 'Bulma CSS'],
+        description: 'This application is a MEN Stack application that tracks all time coach data for players in a fantasy leage that I have been running for 14+ years. Building this application allow me to showcase my understanding of RESTful routes and CRUD in a real-world setting. It presented unique challenges with authenication and session validation, data visualization and manipulation, and styling.',
+        url: 'https://mdl-statracker-c011c52bd590.herokuapp.com/',
+        github: 'https://github.com/ryandeist/mdl-statracker-app',
+        image: StatrackerImage,
     },
     {
-        title: 'Portfolio Website',
-        description: 'This site! Built with React, TypeScript, and deployed on Vercel.',
+        title: 'Battleship',
+        technologies: ['JavaScript', 'HTML', 'CSS'],
+        description: 'This program is an adaptation of the classic board game, Battleship. I chose this game not just because I remember it fondly from my childhood, but also it presented a great opportunity to solve unique challenges in JavaScript, like how to place the ships, validating possible placements, and sink logic. As opposed to most other browser versions of this game that have the ship placement logic handled using CSS and HTML, I developed all of the logic exclusively with JavaScript.',
+        url: 'https://ryandeist.github.io/battleship-game/',
+        github: 'https://github.com/ryandeist/battleship-game',
+        image: BattleshipImage,
     },
 ];
 
@@ -31,11 +56,11 @@ const Home = () => {
     const nodeRef = useRef(null);
 
     return (
-        <main className="max-w-4xl mx-auto px-4 pt-24 pb-16">
+        <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
             {/* Hero Section with Animated Gradient */}
-            <section className="relative text-center mb-8 overflow-hidden rounded-2xl p-6 md:p-12 bg-gradient-animated bg-long-x animate-scroll-x bg-repeat-x">
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Ryan Deist</h1>
-                <p className="text-gray-800 text-md sm:text-lg">
+            <section className="relative text-center mb-8 overflow-hidden rounded-2xl p-6 sm:p-10 md:p-16 lg:p-20 bg-gradient-animated bg-long-x animate-scroll-x bg-repeat-x">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">Ryan Deist</h1>
+                <p className="text-gray-800 text-md sm:text-lg md:text-xl">
                     <span className="inline sm:hidden">Full-stack developer</span>
                     <span className="hidden sm:inline">
                         Full-stack developer passionate about building clean, efficient, and user-friendly applications.
@@ -50,7 +75,9 @@ const Home = () => {
                         <button
                             key={index}
                             onClick={() => setActiveTab(index)}
-                            className={`flex-1 sm:flex-none min-w-[140px] text-center px-4 py-2 rounded-md font-medium transition-colors duration-200
+                            className={`flex-1 sm:flex-none min-w-[140px] px-4 py-2 sm:px-5 sm:py-3 
+                                md:px-6 md:py-3 lg:px-8 lg:py-4 
+                                text-center text-sm sm:text-base md:text-lg rounded-md font-medium transition-colors duration-200
                                 ${index === activeTab
                                     ? 'bg-indigo-100 text-indigo-600'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
@@ -68,11 +95,8 @@ const Home = () => {
                         classNames="fade"
                         timeout={300}
                     >
-                        <div ref={nodeRef} className="text-center px-4">
-                            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                                {projects[activeTab].title}
-                            </h2>
-                            <p className="text-gray-600 text-md">{projects[activeTab].description}</p>
+                        <div ref={nodeRef} className="px-4">
+                            <ProjectCard project={projects[activeTab]} />
                         </div>
                     </CSSTransition>
                 </SwitchTransition>

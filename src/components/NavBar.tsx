@@ -107,7 +107,7 @@ const NavBar = () => {
                             <Link
                                 key={index}
                                 to={link.path}
-                                onClick={() => setIsOpen(false)} // close on internal click
+                                onClick={() => setIsOpen(false)}
                                 className="text-gray-700 hover:text-indigo-500 transition"
                             >
                                 {link.name}

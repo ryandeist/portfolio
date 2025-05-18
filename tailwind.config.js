@@ -8,18 +8,18 @@ export default {
       },
       backgroundImage: {
         'gradient-animated':
-          'linear-gradient(90deg, #f8f9fa, #6366f1, #f8f9fa, #6366f1, #f8f9fa)', // repeated pattern
+          'linear-gradient(90deg, #f8f9fa, #6366f1, #f8f9fa, #6366f1, #f8f9fa)', 
       },
       backgroundSize: {
         'long-x': '400% 100%',
       },
       animation: {
-        'scroll-x': 'scroll-x 45s linear infinite',
+        'scroll-x': 'scroll-x 60s linear infinite',
       },
       keyframes: {
         'scroll-x': {
           '0%': { backgroundPosition: '0% 0%' },
-          '100%': { backgroundPosition: '300% 0%' }, // scroll full cycle
+          '100%': { backgroundPosition: '300% 0%' }, 
         },
       },
     },

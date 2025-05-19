@@ -58,12 +58,16 @@ const Home = () => {
     return (
         <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
             {/* Hero Section with Animated Gradient */}
-            <section className="relative text-center mb-6 overflow-hidden rounded-2xl p-6 sm:p-10 md:p-16 lg:p-20 bg-gradient-animated bg-long-x animate-scroll-x bg-repeat-x">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">Ryan Deist</h1>
-                <p className="text-gray-800 text-md sm:text-lg md:text-xl">
-                    <span className="inline sm:hidden">Full-stack developer</span>
+            <section className="relative mb-6 overflow-hidden rounded-2xl pb-2 sm:p-4 md:p-5 lg:p-10">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">hello.</h1>
+                <p className="text-white text-md sm:text-lg md:text-xl">
+                    <span className="inline sm:hidden">My name is Ryan and I am a software engineer. <br /><br />Check out my projects ↓</span>
                     <span className="hidden sm:inline">
-                        Full-stack developer passionate about building clean, efficient, and user-friendly applications.
+                        My name is Ryan. I am a software engineer based in Baltimore, MD with a mind for business operations that loves to solve problems through technical solutions. 
+                        I approach problems . Look forward to connecting... 
+                        <br />
+                        <br />
+                        Check out my projects ↓
                     </span>
                 </p>
             </section>

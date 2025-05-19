@@ -41,17 +41,6 @@ const NavBar = () => {
                 {/* Desktop Nav */}
                 <div className="hidden md:flex ml-auto space-x-4 sm:space-x-6 lg:space-x-8">
                     {navLinks.map((link, index) =>
-                        link.external ? (
-                            <a
-                                key={index}
-                                href={link.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-700 hover:text-indigo-500 transition text-sm sm:text-base md:text-lg lg:text-xl"
-                            >
-                                {link.name}
-                            </a>
-                        ) : (
                             <Link
                                 key={index}
                                 to={link.path}
@@ -59,7 +48,6 @@ const NavBar = () => {
                             >
                                 {link.name}
                             </Link>
-                        )
                     )}
                 </div>
 
@@ -94,17 +82,6 @@ const NavBar = () => {
             >
                 <div className="flex flex-col items-end px-4 py-4 space-y-4">
                     {navLinks.map((link, index) =>
-                        link.external ? (
-                            <a
-                                key={index}
-                                href={link.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-700 hover:text-indigo-500 transition"
-                            >
-                                {link.name}
-                            </a>
-                        ) : (
                             <Link
                                 key={index}
                                 to={link.path}
@@ -113,7 +90,6 @@ const NavBar = () => {
                             >
                                 {link.name}
                             </Link>
-                        )
                     )}
                 </div>
             </div>

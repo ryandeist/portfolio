@@ -6,8 +6,3 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 6rem;
 }
-
-/* body {
-  @apply bg-no-repeat bg-cover bg-center;
-  background-image: url('/images/w9.jpg');
-} */

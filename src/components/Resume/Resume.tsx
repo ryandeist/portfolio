@@ -31,7 +31,7 @@ const Resume = () => {
         });
 
         return () => observer.disconnect();
-    }, []);
+    });
 
     useEffect(() => {
         const handleScroll = () => {

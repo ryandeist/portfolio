@@ -16,6 +16,7 @@ export default {
       animation: {
         'scroll-x': 'scroll-x 60s linear infinite',
         'shimmer': 'shimmer 1.5s linear infinite',
+        'fade-in': 'fade-in 0.5s ease-out forwards',
       },
       keyframes: {
         'scroll-x': {
@@ -25,6 +26,10 @@ export default {
         'shimmer': {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
     },

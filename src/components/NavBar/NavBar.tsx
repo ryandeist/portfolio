@@ -2,12 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const navLinks = [
-    { name: 'Projects', path: '/projects' },
-    { name: 'About', path: '/about' },
-    { name: 'Resume', path: '/resume' },
-    { name: 'GitHub', path: 'https://github.com/ryandeist', external: true },
-    { name: 'LinkedIn', path: 'https://www.linkedin.com/in/ryantdeist/', external: true },
-    { name: 'Contact', path: '/contact' },
+    // { name: 'Projects', path: '/projects' },
+    { name: '/about', path: '/about' },
+    { name: '/resume', path: '/resume' },
+    // { name: 'GitHub', path: 'https://github.com/ryandeist', external: true },
+    // { name: 'LinkedIn', path: 'https://www.linkedin.com/in/ryantdeist/', external: true },
+    { name: '/contact', path: '/contact' },
 ];
 
 const NavBar = () => {
@@ -35,7 +35,7 @@ const NavBar = () => {
             <div className="mx-auto xl:mx-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-600">
 
-                    <Link to="/">/portfolio</Link>
+                    <Link to="/">ryandeist/portfolio</Link>
                 </div>
 
                 {/* Desktop Nav */}

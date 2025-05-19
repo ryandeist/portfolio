@@ -49,17 +49,26 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block text-white bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-md text-center font-semibold transition"
+                        className="group relative inline-block text-white bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-md text-center font-semibold overflow-hidden transition"
                     >
-                        See the Site
+                        <span className="relative z-10">See the Site</span>
+                        <span
+                            aria-hidden="true"
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -translate-x-full z-0 will-change-transform group-hover:animate-shimmer"
+                        ></span>
                     </a>
+
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block text-gray-700 bg-gray-200 hover:bg-gray-300 px-5 py-2 rounded-md text-center font-semibold transition"
+                        className="group relative inline-block text-gray-700 bg-gray-200 hover:bg-gray-300 px-5 py-2 rounded-md text-center font-semibold overflow-hidden transition"
                     >
-                        See the Code
+                        <span className="relative z-10">See the Code</span>
+                        <span
+                            aria-hidden="true"
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -translate-x-full z-0 will-change-transform group-hover:animate-shimmer"
+                        ></span>
                     </a>
                 </div>
             </div>

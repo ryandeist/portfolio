@@ -15,11 +15,16 @@ export default {
       },
       animation: {
         'scroll-x': 'scroll-x 60s linear infinite',
+        'shimmer': 'shimmer 1.5s linear infinite',
       },
       keyframes: {
         'scroll-x': {
           '0%': { backgroundPosition: '0% 0%' },
           '100%': { backgroundPosition: '300% 0%' }, 
+        },
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
     },

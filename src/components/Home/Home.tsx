@@ -58,7 +58,7 @@ const Home = () => {
     return (
         <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
             {/* Hero Section with Animated Gradient */}
-            <section className="relative text-center mb-8 overflow-hidden rounded-2xl p-6 sm:p-10 md:p-16 lg:p-20 bg-gradient-animated bg-long-x animate-scroll-x bg-repeat-x">
+            <section className="relative text-center mb-6 overflow-hidden rounded-2xl p-6 sm:p-10 md:p-16 lg:p-20 bg-gradient-animated bg-long-x animate-scroll-x bg-repeat-x">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">Ryan Deist</h1>
                 <p className="text-gray-800 text-md sm:text-lg md:text-xl">
                     <span className="inline sm:hidden">Full-stack developer</span>
@@ -69,8 +69,8 @@ const Home = () => {
             </section>
 
             {/* Tabs */}
-            <section className="border-t border-gray-200 pt-8">
-                <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-4 mb-6">
+            <section className="">
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
                     {projects.map((project, index) => (
                         <button
                             key={index}
@@ -95,7 +95,7 @@ const Home = () => {
                         classNames="fade"
                         timeout={300}
                     >
-                        <div ref={nodeRef} className="px-4">
+                        <div ref={nodeRef} className="">
                             <ProjectCard project={projects[activeTab]} />
                         </div>
                     </CSSTransition>

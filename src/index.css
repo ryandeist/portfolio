@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* body {
+  @apply bg-no-repeat bg-cover bg-center;
+  background-image: url('/images/w9.jpg');
+} */

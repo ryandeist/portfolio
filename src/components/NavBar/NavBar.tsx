@@ -48,7 +48,6 @@ const NavBar = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-indigo-500 transition text-sm sm:text-base md:text-lg lg:text-xl"
-
                             >
                                 {link.name}
                             </a>
@@ -57,7 +56,6 @@ const NavBar = () => {
                                 key={index}
                                 to={link.path}
                                 className="text-gray-700 hover:text-indigo-500 transition text-sm sm:text-base md:text-lg lg:text-xl"
-
                             >
                                 {link.name}
                             </Link>

@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom"
 function App() {
 
   return (
-    <>
+    <div className="min-h-screen bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/w9.jpg')]">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/resume" element={<Home />} />
         <Route path="/contact" element={<Home />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

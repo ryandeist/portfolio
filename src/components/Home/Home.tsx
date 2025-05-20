@@ -63,8 +63,7 @@ const Home = () => {
                 <p className="text-white text-md sm:text-lg md:text-xl">
                     <span className="inline sm:hidden">My name is Ryan and I am a software engineer. <br /><br />Check out my projects ↓</span>
                     <span className="hidden sm:inline">
-                        My name is Ryan. I am a software engineer based in Baltimore, MD with a mind for business operations that loves to solve problems through technical solutions. 
-                        I approach problems . Look forward to connecting... 
+                    I'm Ryan, a Baltimore-based software engineer with a passion for solving business problems through user-focused technical solutions. Look forward to connecting!
                         <br />
                         <br />
                         Check out my projects ↓

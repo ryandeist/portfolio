@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const navLinks = [
-    // { name: 'Projects', path: '/projects' },
+    { name: '/projects', path: '/projects' },
     { name: '/about', path: '/about' },
     { name: '/resume', path: '/resume' },
     // { name: 'GitHub', path: 'https://github.com/ryandeist', external: true },

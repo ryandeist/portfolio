@@ -20,7 +20,7 @@ const Resume = () => {
                 }
             },
             {
-                rootMargin: '-25% 0px -50% 0px',
+                rootMargin: '-10% 0px -5% 0px',
                 threshold: 0.25,
             }
         );
@@ -47,15 +47,15 @@ const Resume = () => {
             <main className="relative max-w-screen-xl mx-auto px-4 pt-24 pb-16 flex gap-8">
                 {/* Sticky Nav */}
                 <aside className="hidden lg:flex flex-col w-48 flex-shrink-0 sticky top-24 self-start">
-                    <nav className="bg-white shadow-md rounded-xl p-4 space-y-4 text-base font-medium flex flex-col justify-between h-full">
+                    <nav className="shadow-md rounded-xl p-4 space-y-4 text-base font-medium flex flex-col justify-between h-full">
                         <div className="space-y-4">
                             {sectionIds.map(id => (
                                 <a
                                     key={id}
                                     href={`#${id}`}
                                     className={`block transition ${activeId === id
-                                        ? 'text-indigo-700 font-bold underline'
-                                        : 'text-gray-700 hover:text-indigo-600'
+                                        ? 'text-white font-bold underline'
+                                        : 'text-gray-400 hover:text-indigo-600'
                                         }`}
                                 >
                                     {id.charAt(0).toUpperCase() + id.slice(1).replace('-', ' ')}

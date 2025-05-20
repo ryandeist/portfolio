@@ -10,7 +10,6 @@ const About: React.FC = () => {
                 </h1>
 
                 <div className="flex flex-col-reverse md:flex-row items-start gap-8">
-                    {/* Profile Image */}
                     <div className="w-full md:w-2/5 flex-shrink-0 my-auto">
                         <img
                             src={Ryan} 
@@ -19,7 +18,6 @@ const About: React.FC = () => {
                         />
                     </div>
 
-                    {/* Bio Text */}
                     <div className="w-full md:w-3/4 space-y-6 text-lg leading-relaxed text-white">
                         <p>
                             After leaving a career in recruiting, I pursued software engineering to align my work with what genuinely excites me. I’ve always been technically curious, but once I started coding, I felt a strong internal drive to keep going. I found joy in problem-solving and the rush of getting code to work just right. The more I practiced, the more it clicked. I was constantly thinking about how to improve what I had built. I’m motivated not only by the challenge but also by the satisfaction of creating something useful that others can benefit from.

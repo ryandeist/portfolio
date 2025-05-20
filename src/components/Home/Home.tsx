@@ -57,7 +57,6 @@ const Home = () => {
 
     return (
         <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
-            {/* Hero Section with Animated Gradient */}
             <section className="relative mb-6 overflow-hidden rounded-2xl pb-2 sm:p-4 md:p-5 lg:p-10">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">hello.</h1>
                 <p className="text-white text-md sm:text-lg md:text-xl">

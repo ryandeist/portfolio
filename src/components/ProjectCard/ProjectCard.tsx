@@ -16,7 +16,6 @@ type Props = {
 const ProjectCard: React.FC<Props> = ({ project }) => {
     return (
         <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col lg:flex-row w-full max-w-7xl mx-auto">
-            {/* Left: Image */}
             <div className="lg:w-3/5 w-full h-64 md:h-auto">
                 <img
                     src={project.image}
@@ -25,7 +24,6 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 />
             </div>
 
-            {/* Right: Text Content */}
             <div className="p-6 lg:w-2/5 flex flex-col">
                 <div>
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>

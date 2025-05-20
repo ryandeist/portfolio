@@ -5,8 +5,6 @@ const navLinks = [
     { name: '/projects', path: '/projects' },
     { name: '/about', path: '/about' },
     { name: '/resume', path: '/resume' },
-    // { name: 'GitHub', path: 'https://github.com/ryandeist', external: true },
-    // { name: 'LinkedIn', path: 'https://www.linkedin.com/in/ryantdeist/', external: true },
     { name: '/contact', path: '/contact' },
 ];
 
@@ -14,7 +12,6 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement | null>(null);
 
-    // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (

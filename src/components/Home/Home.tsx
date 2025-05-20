@@ -65,7 +65,7 @@ const Home = () => {
                     I'm Ryan, a Baltimore-based software engineer with a diverse background in tech, recruiting, and service. I love solving business problems through user-focused technical solutions. Look forward to connecting!
                         <br />
                         <br />
-                        Check out my projects ↓
+                        <h3 className='text-white font-bold text-2xl text-center'>Check out my projects ↓</h3>
                     </span>
                 </p>
             </section>

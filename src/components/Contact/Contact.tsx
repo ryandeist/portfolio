@@ -74,6 +74,9 @@ const Contact: React.FC = () => {
                 >
                     <form ref={form} onSubmit={sendEmail} className="space-y-6">
                         <div>
+                            <h1 className="text-2xl font-bold text-gray-800 mb-2 text-center">Send me an email!</h1>
+                        </div>
+                        <div>
                             <label htmlFor="name" className="block font-medium mb-1">Name</label>
                             <input
                                 type="text"
@@ -85,7 +88,7 @@ const Contact: React.FC = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="email" className="block font-medium mb-1">Email</label>
+                            <label htmlFor="email" className="block font-medium mb-1">Your Email</label>
                             <input
                                 type="email"
                                 id="email"

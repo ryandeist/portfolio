@@ -6,3 +6,21 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 6rem;
 }
+
+.fade-route-enter {
+  opacity: 0;
+}
+
+.fade-route-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in-out;
+}
+
+.fade-route-exit {
+  opacity: 1;
+}
+
+.fade-route-exit-active {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}

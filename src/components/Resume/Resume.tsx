@@ -9,38 +9,29 @@ const Resume = () => {
     const sectionIds = ['summary', 'skills', 'projects', 'education', 'experience'];
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visibleSections = entries
-                    .filter(entry => entry.isIntersecting)
-                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-
-                if (visibleSections.length > 0) {
-                    setActiveId(visibleSections[0].target.id);
-                }
-            },
-            {
-                rootMargin: '-10% 0px -5% 0px',
-                threshold: 0.25,
-            }
-        );
-
-        sectionIds.forEach((id) => {
-            const section = document.getElementById(id);
-            if (section) observer.observe(section);
-        });
-
-        return () => observer.disconnect();
-    });
-
-    useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 100);
+            const scrollY = window.scrollY + 120; // offset for sticky nav
+            setIsScrolled(scrollY > 100);
+
+            const visibleSections = sectionIds
+                .map(id => {
+                    const section = document.getElementById(id);
+                    if (!section) return null;
+                    return { id, offsetTop: section.offsetTop };
+                })
+                .filter(Boolean)
+                .sort((a, b) => b!.offsetTop - a!.offsetTop);
+
+            const current = visibleSections.find(section => scrollY >= section!.offsetTop);
+            if (current) {
+                setActiveId(current.id);
+            }
         };
+
         window.addEventListener('scroll', handleScroll);
+        handleScroll(); // initial run
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
 
     return (
         <>

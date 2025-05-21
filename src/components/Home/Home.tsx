@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import BattleshipImage from "/images/battleship.png";
@@ -54,6 +55,18 @@ const projects: Project[] = [
 const Home = () => {
     const [activeTab, setActiveTab] = useState(0);
     const nodeRef = useRef(null);
+    const tabRef = useRef<HTMLDivElement>(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const shouldScroll = params.get('scrollTo') === 'projects';
+        if (shouldScroll) {
+            setTimeout(() => {
+                tabRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }, 200); 
+        }
+    }, [location.search]);
 
     return (
         <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
@@ -62,7 +75,7 @@ const Home = () => {
                 <p className="text-white text-md sm:text-lg md:text-xl">
                     <span className="inline sm:hidden">My name is Ryan and I am a software engineer. <br /><br />Check out my projects ↓</span>
                     <span className="hidden sm:inline">
-                    I'm Ryan, a Baltimore-based software engineer with a diverse background in tech, recruiting, and service. I love solving business problems through user-focused technical solutions. Look forward to connecting!
+                        I'm Ryan, a Baltimore-based software engineer with a diverse background in tech, recruiting, and service. I love solving business problems through user-focused technical solutions. Look forward to connecting!
                         <br />
                         <br />
                         <h3 className='text-white font-bold text-2xl text-center'>Check out my projects ↓</h3>
@@ -71,12 +84,15 @@ const Home = () => {
             </section>
 
             {/* Tabs */}
-            <section className="">
+            <section ref={tabRef}>
                 <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
                     {projects.map((project, index) => (
                         <button
                             key={index}
-                            onClick={() => setActiveTab(index)}
+                            onClick={() => {
+                                setActiveTab(index);
+                                tabRef.current?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             className={`flex-1 sm:flex-none min-w-[140px] px-4 py-2 sm:px-5 sm:py-3 
                                 md:px-6 md:py-3 lg:px-8 lg:py-4 
                                 text-center text-sm sm:text-base md:text-lg rounded-md font-medium transition-colors duration-200

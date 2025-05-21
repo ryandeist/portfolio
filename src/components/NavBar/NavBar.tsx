@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const navLinks = [
-    { name: '/projects', path: '/' },
+    { name: '/projects', path: '/?scrollTo=projects' },
     { name: '/about', path: '/about' },
     { name: '/resume', path: '/resume' },
     { name: '/contact', path: '/contact' },

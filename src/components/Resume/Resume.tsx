@@ -47,7 +47,7 @@ const Resume = () => {
             <main className="relative max-w-screen-xl mx-auto px-4 pt-24 pb-16 flex gap-8">
                 {/* Sticky Nav */}
                 <aside className="hidden lg:flex flex-col w-48 flex-shrink-0 sticky top-24 self-start">
-                    <nav className="shadow-md rounded-xl p-4 space-y-4 text-base font-medium flex flex-col justify-between h-full">
+                    <nav className="rounded-xl p-4 space-y-4 text-base font-medium flex flex-col justify-between h-full">
                         <div className="space-y-4">
                             {sectionIds.map(id => (
                                 <a
